@@ -760,6 +760,60 @@ background: linear-gradient(rgb(255 255 255), rgb(135 135 135 / 48%));
         grid-template-columns: 1fr;
     }
   }
+  /* product-details responsive below 480px */
+  @media (max-width: 480px) {
+    .product-detail {
+      padding: 4rem 1rem;
+    }
+  
+    .product-detail-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      box-shadow: none;
+      background: linear-gradient(rgb(255 255 255), rgb(135 135 135 / 20%));
+    }
+  
+    .product-detail-image {
+      height: 350px;
+    }
+  
+    .product-detail-content {
+      padding: 0 0.5rem;
+    }
+  
+    .product-detail-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .product-detail-price {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .tabs {
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 1rem;
+    }
+  
+    .tab {
+      font-size: 1rem;
+      padding-bottom: 0.3rem;
+    }
+  
+    .features-list,
+    .specifications-list {
+      font-size: 0.875rem;
+    }
+  
+    .specification-item {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0.5rem 0;
+    }
+  }
+  
   /* aboutus */
   /* Base Styles */
 
