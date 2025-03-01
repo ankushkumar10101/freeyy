@@ -277,7 +277,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url("https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
+    background-image: url("https://img.freepik.com/free-vector/offline-concept-illustration_114360-6953.jpg?t=st=1740856422~exp=1740860022~hmac=36188bf0a10c289958bb8168499d2b389ef9f036b5f93ebe0cb920b802c76202&w=2000");
     background-size: cover;
     background-position: center;
   }
@@ -835,7 +835,7 @@ background: linear-gradient(rgb(255 255 255), rgb(135 135 135 / 48%));
   .welcome-banner-background {
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(rgb(58 16 18 / 77%), rgb(23 22 22 / 50%)),url("https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+    background-image: linear-gradient(rgb(58 16 18 / 77%), rgb(23 22 22 / 50%)),url("https://img.freepik.com/free-vector/white-background-with-wavy-line_361591-1216.jpg?t=st=1740864447~exp=1740868047~hmac=8f432a780e30809e500f6f45d87df9ed7b04e51b1b4842d621c1e014fdf833e1&w=1800");
     background-position: center;
     background-size: cover;
     filter: brightness(0.5);
@@ -1533,6 +1533,15 @@ background: linear-gradient(rgb(255 255 255), rgb(135 135 135 / 48%));
     display: flex;
     justify-content: center;
   }
+  .profile-pic2{
+    background: no-repeat center/cover url(https://plus.unsplash.com/premium_photo-1689551670902-19b441a6afde?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fHww);
+  }
+  .profile-pic3{
+    background: no-repeat center/cover url(https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fHww);
+  }
+  .profile-pic4{
+    background: no-repeat center/cover url(https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fHww);
+  }
 
   .review-footer{
     background:  linear-gradient(90deg, #111111 0%, rgb(66 38 38 / 90%));
@@ -1570,7 +1579,7 @@ background: linear-gradient(rgb(255 255 255), rgb(135 135 135 / 48%));
 
     }
     .review-text {
-      font-size: 16px;
+      font-size: 19px;
       padding: 1.5em;
     }
 
@@ -1581,7 +1590,7 @@ background: linear-gradient(rgb(255 255 255), rgb(135 135 135 / 48%));
     }
 
     .reviewer {
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
   }
   /* xyz section */
@@ -1896,7 +1905,7 @@ background: linear-gradient(rgb(255 255 255), rgb(135 135 135 / 48%));
   .article-icon {
     width: 2rem;
     height: 2rem;
-    color: #d4d4d4;
+    color:#800020;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
   }
@@ -2426,7 +2435,8 @@ background: linear-gradient(rgb(255 255 255), rgb(135 135 135 / 48%));
   
   /* Mobile Menu */
   .mobile-menu {
-    background-color: var(--light-transparent);
+    background-color: rgb(203 203 203 / 90%);
+    
   }
   
   .mobile-link {
@@ -2463,7 +2473,7 @@ background: linear-gradient(rgb(255 255 255), rgb(135 135 135 / 48%));
   
   /* Hero Section */
   .hero::before {
-    background: linear-gradient(45deg, rgb(27 7 8 / 90%), var(--dark-transparent));
+    background: linear-gradient(45deg, rgb(27 7 8 / 66%), rgb(61 61 61));
   }
   
 
@@ -2498,12 +2508,13 @@ background: linear-gradient(rgb(255 255 255), rgb(135 135 135 / 48%));
   
   /* FAQ Section */
   .x8k3m9 {
-    background: linear-gradient(to bottom, rgb(38 3 3 / 90%), rgb(0 0 0 / 89%));
+    background: linear-gradient(to bottom, rgb(30 2 2 / 83%), rgb(0 0 0 / 89%));
   }
   
   .f9x2p4 {
-    background-color: #2323236b;
-    border: 1px solid var(--primary);
+    background-color: #232323b8;
+    border: 1px solid #581f2787;
+
   }
   
   .b3j7r2:focus, 
@@ -2541,3 +2552,9 @@ background: linear-gradient(rgb(255 255 255), rgb(135 135 135 / 48%));
     border-left: 4px solid var(--primary);
     background: rgba(121, 27, 41, 0.05);
   }
+  a{
+    text-decoration: none;
+  }
+.btn-primary:active{
+  color: white;
+}

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Order Confirmed</title>
+    <style>
+        :root {
+            --color-primary: #800020;
+            --color-primary-hover: #600013;
+            --color-text: #e0e0e0;
+            --color-text-light: #aaaaaa;
+            --color-background: #1a1a1a;
+            --color-border: #333333;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: var(--color-text);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .thankyou_wrapper_m38 {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .confirmation_container_r74 {
+            background: linear-gradient(145deg, rgba(30, 30, 30, 0.8), rgba(20, 20, 20, 0.9));
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3),
+                        0 5px 15px rgba(0, 0, 0, 0.2),
+                        0 3px 5px rgba(128, 0, 32, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+        }
+
+        .confirmation_container_r74::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #4a0000, #800020, #4a0000);
+            z-index: 1;
+        }
+
+        .header_banner_j19 {
+            background: linear-gradient(140deg, rgba(128, 0, 32, 0.9), rgba(30, 30, 30, 0.8));
+            padding: 60px 40px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header_banner_j19::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/api/placeholder/800/200');
+            opacity: 0.05;
+            mix-blend-mode: overlay;
+        }
+
+        .check_icon_g82 {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #800020, #4a0000);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .check_icon_g82:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(128, 0, 32, 0.6);
+        }
+
+        .check_icon_g82 svg {
+            width: 40px;
+            height: 40px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2;
+        }
+
+        .success_title_w92 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            background: linear-gradient(90deg, #ccc, #fff, #ccc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            z-index: 1;
+        }
+
+        .success_message_l53 {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .order_number_p34 {
+            font-family: monospace;
+            font-size: 18px;
+            background: linear-gradient(135deg, rgba(128, 0, 32, 0.2), rgba(50, 50, 50, 0.5));
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin: 15px auto 0;
+            display: inline-block;
+            color: var(--color-primary);
+            font-weight: bold;
+            border: 1px solid rgba(128, 0, 32, 0.3);
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .order_number_p34:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .order_details_s47 {
+            padding: 60px 40px;
+            position: relative;
+        }
+
+        .section_heading_j14 {
+            color: var(--color-text);
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section_heading_j14::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #4a0000, #800020, #4a0000);
+        }
+
+        .info_grid_h29 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .info_box_w45 {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 20px;
+            border-radius: 8px;
+            background: rgba(40, 40, 40, 0.4);
+            border: 1px solid rgba(60, 60, 60, 0.5);
+        }
+
+        .info_box_w45:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-color: rgba(128, 0, 32, 0.3);
+        }
+
+        .info_title_y29 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        .info_text_l64 {
+            color: var(--color-text-light);
+            font-size: 16px;
+        }
+
+        .order_summary_v73 {
+            background: linear-gradient(145deg, rgba(40, 40, 40, 0.6), rgba(30, 30, 30, 0.8));
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: left;
+            border: 1px solid rgba(60, 60, 60, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .order_summary_v73:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .summary_row_f38 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(60, 60, 60, 0.5);
+        }
+
+        .summary_row_f38:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .summary_total_g27 {
+            font-weight: 600;
+            color: var(--color-primary);
+            font-size: 18px;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 2px solid rgba(60, 60, 60, 0.8);
+        }
+
+        .action_buttons_n72 {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .primary_button_n59 {
+            background: linear-gradient(135deg, #800020, #4a0000);
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .primary_button_n59:hover {
+            background: linear-gradient(135deg, #9a0026, #600013);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .secondary_button_d83 {
+            background: transparent;
+            color: var(--color-primary);
+            padding: 15px 30px;
+            border: 1px solid var(--color-primary);
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .secondary_button_d83:hover {
+            background: rgba(128, 0, 32, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(128, 0, 32, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(128, 0, 32, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(128, 0, 32, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .info_grid_h29 {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .action_buttons_n72 {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .header_banner_j19, .order_details_s47 {
+                padding: 40px 30px;
+            }
+
+            .success_title_w92 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thankyou_wrapper_m38">
+        <div class="confirmation_container_r74">
+            <div class="header_banner_j19">
+                <div class="check_icon_g82">
+                    <svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <h1 class="success_title_w92">Thank You for Your Order!</h1>
+                <p class="success_message_l53">Your order has been received and is now being processed. You will receive a confirmation email shortly.</p>
+                <div class="order_number_p34">Order #WR29874365</div>
+            </div>
+            
+            <div class="order_details_s47">
+                <h2 class="section_heading_j14">Order Details</h2>
+                
+                <div class="info_grid_h29">
+                    <div class="info_box_w45">
+                        <h3 class="info_title_y29">Shipping Address</h3>
+                        <p class="info_text_l64">
+                            John Smith<br>
+                            123 Wine Street<br>
+                            Burgundy Hills, CA 90210<br>
+                            United States
+                        </p>
+                    </div>
+                    
+                    <div class="info_box_w45">
+                        <h3 class="info_title_y29">Delivery Information</h3>
+                        <p class="info_text_l64">
+                            Estimated Delivery: March 5-7, 2025<br>
+                            Shipping Method: Express Delivery<br>
+                            Tracking will be available soon
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="order_summary_v73">
+                    <h3 class="section_heading_j14">Order Summary</h3>
+                    <div class="summary_row_f38">
+                        <span>Product</span>
+                        <span>$129.99</span>
+                    </div>
+                    <div class="summary_row_f38">
+                        <span>Shipping</span>
+                        <span>$9.99</span>
+                    </div>
+                    <div class="summary_row_f38">
+                        <span>Tax</span>
+                        <span>$13.00</span>
+                    </div>
+                    <div class="summary_row_f38 summary_total_g27">
+                        <span>Total</span>
+                        <span>$152.98</span>
+                    </div>
+                </div>
+                
+                <div class="action_buttons_n72">
+                   
+                    <a href="index.html" class="primary_button_n59">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add hover effects
+        document.querySelectorAll('.action_buttons_n72 a').forEach(button => {
+            button.addEventListener('mouseover', function() {
+                document.querySelector('.check_icon_g82').classList.add('pulse');
+            });
+            
+            button.addEventListener('mouseout', function() {
+                document.querySelector('.check_icon_g82').classList.remove('pulse');
+            });
+        });
+    </script>
+</body>
+</html>
